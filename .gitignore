@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environments
+env/
+venv/
+.learn-env/
+
+# Data files (si tu ne veux pas versionner les bases lourdes)
+*.db
+*.sqlite
+*.csv
+*.gz
+
+# VSCode settings
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
