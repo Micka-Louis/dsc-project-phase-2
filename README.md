@@ -1,26 +1,26 @@
 # Akademi (Flatiron School) — Data Science & AI, Cohorte 2025
 # Second Project – Phase 2
-**Student Name:** Micka LOUIS
-**Student Pace:** Self-paced
-**Submission Deadline:** July 20, 2025
-**Instructors' Names:** Wedter JEROME & Geovany Batista Polo LAGUERRE
-**Blog Post URL:** https://github.com/Micka-Louis/dsc-project-phase-2.git
+**Student Name:** Micka LOUIS  
+**Student Pace:** Self-paced  
+**Submission Deadline:** July 20, 2025  
+**Instructors' Names:** Wedter JEROME & Geovany Batista Polo LAGUERRE  
+**Blog Post URL:** https://github.com/Micka-Louis/dsc-project-phase-2.git  
 
- # Project Title  
+ # Project Title       
  
-# Box Office Success: A Statistical Approach
-![Cover](images/imag1.jpg)
+# Box Office Success: A Statistical Approach  
+![Cover](images/imag1.jpg)   
 
-# Overview 
-This project aims to help a company understand what types of films to produce as part of launching a new film studio. We will analyze data from multiple sources to formulate three concrete business recommendations.
+# Overview  
+This project aims to help a company understand what types of films to produce as part of launching a new film studio. We will analyze data from multiple sources to formulate three concrete business recommendations.  
 
-# Business Understanding & Business Problem
-![Cover](images/imag2.jpg)
-Before investing in a first film, the company wants to minimize risk by relying on evidence, based analysis drawn from historical data. It seeks to understand which genres are the most profitable, whether a film’s duration impacts its revenue, whether highly rated films attract more viewers, if there's a link between popularity (measured by the number of votes) and financial success, or whether certain production formats, such as feature films, should be prioritized.
+# Business Understanding & Business Problem  
+![Cover](images/imag2.jpg)  
+Before investing in a first film, the company wants to minimize risk by relying on evidence, based analysis drawn from historical data. It seeks to understand which genres are the most profitable, whether a film’s duration impacts its revenue, whether highly rated films attract more viewers, if there's a link between popularity (measured by the number of votes) and financial success, or whether certain production formats, such as feature films, should be prioritized.  
 
-This project aims to turn past data into future decisions by providing the studio with concrete and measurable insights to help it choose the right kind of films to produce.
+This project aims to turn past data into future decisions by providing the studio with concrete and measurable insights to help it choose the right kind of films to produce.  
 
-The business problem can be formulated as follows:  
+The business problem can be formulated as follows:    
 How can a new film production company maximize its chances of box office success by intelligently choosing the characteristics of the films it produces?  
 
 To address this question, it is necessary to:  
@@ -31,35 +31,35 @@ To address this question, it is necessary to:
 
 - and formulate operational and strategic recommendations to guide the studio's early production decisions.
 
-# 1-Data Understanding 
-To meet the objectives of the analysis, we rely on **three main data sources**:
+# 1-Data Understanding   
+To meet the objectives of the analysis, we rely on **three main data sources**:  
 
-1. **Box Office Mojo (`bom.movie_gross.csv.gz`)** – This dataset provides essential financial information such as domestic and international gross revenue, movie titles, release groups, and studios.
+1. **Box Office Mojo (`bom.movie_gross.csv.gz`)** – This dataset provides essential financial information such as domestic and international gross revenue, movie titles, release groups, and studios. 
 
-2. **The Numbers (`tn.movie_budgets.csv.gz`)** – This source adds **budget data**, including production budgets and total worldwide gross, enabling us to analyze the relationship between investment and return.
+2. **The Numbers (`tn.movie_budgets.csv.gz`)** – This source adds **budget data**, including production budgets and total worldwide gross, enabling us to analyze the relationship between investment and return.  
 
-3. **IMDb (`IMDb movies.csv` or equivalent)** – This dataset includes critical reception indicators such as **average viewer ratings**, **number of votes**, **genre**, **runtime**, and **type of film** (e.g., feature film, TV series).
+3. **IMDb (`IMDb movies.csv` or equivalent)** – This dataset includes critical reception indicators such as **average viewer ratings**, **number of votes**, **genre**, **runtime**, and **type of film** (e.g., feature film, TV series).  
 
-These datasets were merged based on relevant keys like the **movie title** and **release type**, providing an enriched and unified view of each film. This combined perspective allows us to study the **commercial performance**, **viewer perception**, and **production context** simultaneously.
+These datasets were merged based on relevant keys like the **movie title** and **release type**, providing an enriched and unified view of each film. This combined perspective allows us to study the **commercial performance**, **viewer perception**, and **production context** simultaneously.  
 
-This understanding phase allows us to:
-- Identify relevant variables for the business problem (e.g., gross revenue, rating, budget, genre),
-- Evaluate data quality (missing values, duplicates, inconsistent formats),
-- Detect potential issues before deeper statistical analysis and modeling.
+This understanding phase allows us to:  
+- Identify relevant variables for the business problem (e.g., gross revenue, rating, budget, genre),  
+- Evaluate data quality (missing values, duplicates, inconsistent formats),  
+- Detect potential issues before deeper statistical analysis and modeling.  
 
-# 2-Tools and Methods
-## Data Sources
-- Box Office Mojo (bom.movie_gross.csv.gz): Domestic and foreign gross revenue data for films.
-- IMDb Database (im.db.zip): Core movie data (titles, ratings, genres) accessed via SQLite queries.
+# 2-Tools and Methods  
+## Data Sources  
+- Box Office Mojo (bom.movie_gross.csv.gz): Domestic and foreign gross revenue data for films.  
+- IMDb Database (im.db.zip): Core movie data (titles, ratings, genres) accessed via SQLite queries.  
 
-- The Numbers (tn.movie_budgets.csv.gz): Detailed production budgets and worldwide grosses.
+- The Numbers (tn.movie_budgets.csv.gz): Detailed production budgets and worldwide grosses.  
 
-## Statistical Methods
-- Descriptive Statistics: Frequency distribution of genres, runtime distribution, box office earnings.
+## Statistical Methods  
+- Descriptive Statistics: Frequency distribution of genres, runtime distribution, box office earnings. 
 
-- Inferential Statistics:
+- Inferential Statistics:  
 
->ANOVA (Analysis of Variance) to identify significant profit differences among genres.
+>ANOVA (Analysis of Variance) to identify significant profit differences among genres.  
 
 >Tukey’s HSD (Post-hoc Test) for pairwise genre comparisons.
 
@@ -67,32 +67,32 @@ This understanding phase allows us to:
 
 >Chi-Square Tests to analyze associations between categorical variables (if applicable).
 
-## Modeling Techniques
-Multiple Linear Regression (OLS):
+## Modeling Techniques  
+Multiple Linear Regression (OLS):  
 
->Attempted to predict movie profits based on production budget, runtime, average rating, vote count, genres, and release seasons.
+>Attempted to predict movie profits based on production budget, runtime, average rating, vote count, genres, and release seasons.  
 
->Diagnosed model limitations: heteroscedasticity, non-normal residuals, multicollinearity.
+>Diagnosed model limitations: heteroscedasticity, non-normal residuals, multicollinearity.  
 
->Due to assumption violations, the model was not used for final business recommendations.
+>Due to assumption violations, the model was not used for final business recommendations.  
 
-## Tools Used
+## Tools Used  
 
-- Python: pandas, numpy, matplotlib, seaborn
-- SQL via SQLite
-- Git and GitHub for version control
+- Python: pandas, numpy, matplotlib, seaborn  
+- SQL via SQLite  
+- Git and GitHub for version control  
 
-# 3-Results
+# 3-Results  
 ### Distribution of profit
-![Graphique](images/IMAG.png)
+![Graphique](images/imag4.png)  
 The graph above illustrates the distribution of film profits in our database. Most films fall within a relatively low profit range, between 0 and 50 million dollars. A strong right skew is also observed, indicating that a small number of films generate exceptionally high profits, while others even incur losses (negative profit). This representation highlights the high heterogeneity of the film market: although some productions achieve significant commercial success, a substantial proportion of films struggle to break even. This observation reinforces the relevance of our study, which aims to model the factors influencing profit in order to provide informed recommendations to a new film production company.  
 
 ### Distribution of Movies by season
-![Graphique](images/IMAG.png)
+![Graphique](images/imag5.png)  
 The pie chart illustrates the distribution of film releases across the seasons. We observe a relatively balanced distribution among the four seasons. Autumn (26.4%) and Winter (26.5%) account for slightly more releases, while Spring (23.5%) and Summer (23.6%) have slightly fewer. This distribution suggests a release strategy spread throughout the year, with a slight preference for the end of the year—a period generally favorable for high-potential films (blockbusters, year-end releases, awards contenders, etc.). These data can help identify the optimal release periods to maximize a film’s visibility and revenue.  
 
 ### Profit by top 10 genres
-![Graphique](images/IMAG.png)
+![Graphique](images/imag6.png)  
 Genres such as Action, Adventure, and Science Fiction stand out with higher median profits and wider variability, suggesting that while these films can be highly profitable, they also carry greater financial risk.
 
 Genres like Comedy, Drama, and Romance tend to have lower median profits, often close to zero, with fewer extreme values—indicating more modest but potentially more stable returns.
@@ -103,12 +103,12 @@ In contrast, genres like Film-Noir or Western appear to be less profitable on av
 
 Conclusion: Genre is a key determinant of a film’s commercial success. Investing in high-potential genres like Action, Adventure, or Sci-Fi could be a profitable strategy for a new production company aiming to maximize returns. However, these genres typically require larger production budgets, which must be carefully considered alongside potential gains.
 
-### Hypothesis testing
-#### Test 1: Hypothesis 
-**Are Big-Budget Films More Profitable Than Low-Budget Films?** 
-Hint: We divide films into two groups based on the median production budget.  
+### Hypothesis testing  
+#### Test 1: Hypothesis   
+**Are Big-Budget Films More Profitable Than Low-Budget Films?**   
+Hint: We divide films into two groups based on the median production budget.    
 
-**Hypotheses:** 
+**Hypotheses:**   
 >H₀: The average profit of high-budget movies is less than or equal to that of low-budget movies.
 
 >H₁: The average profit of high-budget movies is strictly greater.
