@@ -296,7 +296,7 @@ Collaborate with marketing teams to design A/B tests around release dates, trail
 ├── .ipynb_checkpoints  
 ├── data  
 ├── images  
-├── .gitattiutes  
+├── .gitattributes  
 ├── .gitignore   
 ├── Final.ipynb  
 ├── LICENSE  
