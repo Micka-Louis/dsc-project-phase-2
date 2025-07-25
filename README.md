@@ -288,16 +288,14 @@ Enrich the dataset by integrating variables like marketing spend, number of thea
 Include country-level breakdowns of revenues to explore geographic performance trends, enabling more targeted release strategies.
 
 # Repository Structure
-├── .ipynb_checkpoints
-├── data
-├── images
-├── 
-├── 
-├──
-├──
-├──
-├──
-└── 
+├── .ipynb_checkpoints  
+├── data  
+├── images  
+├── .gitattiutes  
+├── .gitignore   
+├── Final.ipynb  
+├── LICENSE  
+└── README.md  
 
 - Scrape Real-time Data for Trends Monitoring:
 Set up web scraping pipelines or API integrations with platforms like IMDb, Box Office Mojo, and The Numbers to keep the dataset updated and monitor evolving market trends.
