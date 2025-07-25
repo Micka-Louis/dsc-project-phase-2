@@ -286,6 +286,11 @@ Enrich the dataset by integrating variables like marketing spend, number of thea
 
 - Expand to International Markets:
 Include country-level breakdowns of revenues to explore geographic performance trends, enabling more targeted release strategies.
+- Scrape Real-time Data for Trends Monitoring:
+Set up web scraping pipelines or API integrations with platforms like IMDb, Box Office Mojo, and The Numbers to keep the dataset updated and monitor evolving market trends.
+
+- A/B Testing for Release Strategies:
+Collaborate with marketing teams to design A/B tests around release dates, trailers, and promotional campaigns to empirically measure their impact on audience engagement and ticket sales.
 
 # Repository Structure
 ├── .ipynb_checkpoints  
@@ -296,9 +301,3 @@ Include country-level breakdowns of revenues to explore geographic performance t
 ├── Final.ipynb  
 ├── LICENSE  
 └── README.md  
-
-- Scrape Real-time Data for Trends Monitoring:
-Set up web scraping pipelines or API integrations with platforms like IMDb, Box Office Mojo, and The Numbers to keep the dataset updated and monitor evolving market trends.
-
-- A/B Testing for Release Strategies:
-Collaborate with marketing teams to design A/B tests around release dates, trailers, and promotional campaigns to empirically measure their impact on audience engagement and ticket sales.
