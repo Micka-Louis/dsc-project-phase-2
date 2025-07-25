@@ -111,107 +111,107 @@ Hint: We divide films into two groups based on the median production budget.
 **Hypotheses:**   
 >H₀: The average profit of high-budget movies is less than or equal to that of low-budget movies.
 
->H₁: The average profit of high-budget movies is strictly greater.
-**Significance Level**
-α = 0.05
-**Statistical Test :** Student's t-test
->Result: T-statistic: 17.86, P-value (one-tailed): 0.0000
+>H₁: The average profit of high-budget movies is strictly greater.  
+**Significance Level**  
+α = 0.05  
+**Statistical Test :** Student's t-test  
+>Result: T-statistic: 17.86, P-value (one-tailed): 0.0000  
 
-### Decision:   
-Since the one-tailed p-value is 0.0000, which is less than the significance level α = 0.05, and the t-statistic is positive (17.86), we reject the null hypothesis H₀.  
+### Decision:    
+Since the one-tailed p-value is 0.0000, which is less than the significance level α = 0.05, and the t-statistic is positive (17.86), we reject the null hypothesis H₀.    
 
-**Conclusion:** There is strong statistical evidence that high-budget movies (above the median) are significantly more profitable than low-budget ones.  
+**Conclusion:** There is strong statistical evidence that high-budget movies (above the median) are significantly more profitable than low-budget ones.     
 
-#### Test 2: Hypothesis
-**Are longer movies (≥ 120 minutes) rated lower than shorter ones?**  
-
-**Hypotheses:**
->H₀ (null hypothesis): Long movies have an average rating greater than or equal to short movies.
-
->H₁ (alternative hypothesis): Long movies have an average rating strictly lower than short movies.
-
-**Significance Level**
-α = 0.05
-
-**Statistical Test :** Student's t-test
->Result: T-statistic:11.84, P-value (one-tailed): 0.0000
-
-### Decision
-The t-statistic is 11.84 and the one-tailed p-value is 0.0000, which is less than the significance level α = 0.05. However, since the t-statistic is positive, this indicates that long movies actually have a higher average rating than short ones.
-
-**Conclusion:** Therefore, we do not reject H₀. In fact, we have strong evidence against H₁, and conclude that longer movies are not rated lower, they are rated higher on average.
-
-#### Test 2: Hypothesis
-**Is there a statistically significant difference in the average profit among different movie genres?**  
-
-Hint:To answer this question, we will conduct a One-Way ANOVA test to determine whether the mean profit varies across genres.
-If the test shows significant results, a Tukey HSD post-hoc analysis will be performed to identify which genres are significantly more or less profitable.  
+#### Test 2: Hypothesis  
+**Are longer movies (≥ 120 minutes) rated lower than shorter ones?**    
 
 **Hypotheses:**  
-Null Hypothesis (H₀)**
-The mean profit is equal across all genres.  
+>H₀ (null hypothesis): Long movies have an average rating greater than or equal to short movies.  
 
->H₀: μ_Action = μ_Drama = μ_Comedy = μ_Adventure = ... (no difference in average profit)  
+>H₁ (alternative hypothesis): Long movies have an average rating strictly lower than short movies.  
+
+**Significance Level**  
+α = 0.05  
+
+**Statistical Test :** Student's t-test  
+>Result: T-statistic:11.84, P-value (one-tailed): 0.0000  
+
+### Decision  
+The t-statistic is 11.84 and the one-tailed p-value is 0.0000, which is less than the significance level α = 0.05. However, since the t-statistic is positive, this indicates that long movies actually have a higher average rating than short ones.  
+
+**Conclusion:** Therefore, we do not reject H₀. In fact, we have strong evidence against H₁, and conclude that longer movies are not rated lower, they are rated higher on average.  
+
+#### Test 2: Hypothesis  
+**Is there a statistically significant difference in the average profit among different movie genres?**    
+
+Hint:To answer this question, we will conduct a One-Way ANOVA test to determine whether the mean profit varies across genres.  
+If the test shows significant results, a Tukey HSD post-hoc analysis will be performed to identify which genres are significantly more or less profitable.    
+
+**Hypotheses:**  
+Null Hypothesis (H₀)**  
+The mean profit is equal across all genres.    
+
+>H₀: μ_Action = μ_Drama = μ_Comedy = μ_Adventure = ... (no difference in average profit)    
 
 Alternative Hypothesis (H₁)  
 At least one genre has a different average profit compared to others.  
 
->H₁: μ_i ≠ μ_j for at least one pair of genres.
+>H₁: μ_i ≠ μ_j for at least one pair of genres.  
 
-**Significance Level**  
-α = 0.05
+**Significance Level**   
+α = 0.05  
 
-**Statistical Test:** One-Way ANOVA (Analysis of Variance)
->Result: F-statistic: 20.94, P-value: 0.0000
+**Statistical Test:** One-Way ANOVA (Analysis of Variance)  
+>Result: F-statistic: 20.94, P-value: 0.0000  
 
-### Decision   
+### Decision     
 The One-Way ANOVA test revealed a statistically significant difference in the average profit among genres
 (F-statistic = 20.94, p-value = 0.0000). This indicates that at least one genre's average profit differs from the others.  
 
 To identify which specific genres are more profitable, a Tukey HSD post-hoc test was conducted. The key findings are:
 
 **Significant Profitability Differences Identified:**
-- Action movies are significantly more profitable than most other genres:
+- Action movies are significantly more profitable than most other genres:  
 
  -  Action > Drama (mean difference ≈ 93.7𝑀∗∗,𝑝<0.001)−𝐴𝑐𝑡𝑖𝑜𝑛>𝐶𝑜𝑚𝑒𝑑𝑦(𝑚𝑒𝑎𝑛𝑑𝑖𝑓𝑓𝑒𝑟𝑒𝑛𝑐𝑒≈∗∗
-89.1M, p < 0.001)
- -  Action > Biography, Crime, Documentary, Horror, Thriller (all p < 0.05)
- -  Action > Adventure (mean difference ≈ $47.8M, p ≈ 0.0095)
-- Adventure films are significantly more profitable than:  
+89.1M, p < 0.001)  
+ -  Action > Biography, Crime, Documentary, Horror, Thriller (all p < 0.05)  
+ -  Action > Adventure (mean difference ≈ $47.8M, p ≈ 0.0095)  
+- Adventure films are significantly more profitable than:    
 
-  - Drama, Comedy, Biography, Crime, Documentary, Horror, Thriller (all p < 0.05)
-- Drama vs Family:
- - Family films show a significantly higher profit than Drama films (mean difference ≈ $133.9M, p ≈ 0.0337)
+  - Drama, Comedy, Biography, Crime, Documentary, Horror, Thriller (all p < 0.05)  
+- Drama vs Family:  
+ - Family films show a significantly higher profit than Drama films (mean difference ≈ $133.9M, p ≈ 0.0337)  
  
-- Genres with No Significant Profit Differences: 
- - Animation, Sci-Fi, Fantasy, Family (excluding Drama), and Mystery films did not show significant profit differences when compared among each other.
- - Comedy, Crime, and Documentary genres also did not significantly differ between them in terms of profit.
+- Genres with No Significant Profit Differences:   
+ - Animation, Sci-Fi, Fantasy, Family (excluding Drama), and Mystery films did not show significant profit differences when compared among each other.  
+ - Comedy, Crime, and Documentary genres also did not significantly differ between them in terms of profit.  
 
-**Conclusion Based on Hypothesis Test**
+**Conclusion Based on Hypothesis Test**  
 The analysis confirms that Action and Adventure films are the most profitable genres. Additionally, Family films also demonstrate strong profitability, particularly when compared to Drama. On the other hand, genres like Drama, Comedy, Crime, and Documentary consistently show lower profit margins.  
 
-These insights suggest that the company should prioritize producing Action, Adventure, and Family-oriented films, as they represent the highest potential for maximizing box office returns.
+These insights suggest that the company should prioritize producing Action, Adventure, and Family-oriented films, as they represent the highest potential for maximizing box office returns.  
 
-# 4-Modeling Attempt
-**Objective of the Model**
+# 4-Modeling Attempt  
+**Objective of the Model**  
 The primary objective was to build a statistical model capable of explaining and predicting box office profit based on movie characteristics such as budget, runtime, ratings, votes, release season, and genres. A multiple linear regression approach was adopted to quantify how these factors influence profitability.  
-Interpretation of the OLS Regression Results
-**Model Performance**
-R-squared (0.498): The model explains approximately 49.8% of the variability in movie profit. This is a moderate level of explanation, indicating that while the model captures key factors influencing profit, a substantial portion of the variance is still unexplained.
+**Interpretation of the OLS Regression Results**  
+**Model Performance**  
+R-squared (0.498): The model explains approximately 49.8% of the variability in movie profit. This is a moderate level of explanation, indicating that while the model captures key factors influencing profit, a substantial portion of the variance is still unexplained.  
 
-F-statistic (109.6, p-value < 0.001): The model as a whole is statistically significant, meaning that at least one predictor variable is associated with profit.
+F-statistic (109.6, p-value < 0.001): The model as a whole is statistically significant, meaning that at least one predictor variable is associated with profit.  
 
-**Significant Predictors:**
+**Significant Predictors:** 
 
-- Production Budget (coef = 1.87, p < 0.001):
-Strong positive correlation. For every additional dollar spent on production, profit increases by approximately $1.87 on average. This indicates that higher budgets are generally associated with higher profits.
+- Production Budget (coef = 1.87, p < 0.001):  
+Strong positive correlation. For every additional dollar spent on production, profit increases by approximately $1.87 on average. This indicates that higher budgets are generally associated with higher profits.  
 
-- Runtime (coef = -313,100, p ≈ 0.011):
-Negative association. Longer movies tend to generate lower profit. Although significant, the effect size is small compared to budget impacts.
+- Runtime (coef = -313,100, p ≈ 0.011):  
+Negative association. Longer movies tend to generate lower profit. Although significant, the effect size is small compared to budget impacts.  
 
-- Number of Votes (coef = 371.47, p < 0.001): Highly significant positive relationship. More audience engagement (via votes) correlates with higher profits.
+- Number of Votes (coef = 371.47, p < 0.001): Highly significant positive relationship. More audience engagement (via votes) correlates with higher profits.  
 
-Genres with Significant Positive Effects on Profit:
+Genres with Significant Positive Effects on Profit:  
 
 >Adventure (+$50.39M)
 
@@ -233,53 +233,53 @@ Genres with Significant Positive Effects on Profit:
 
 These genres appear to be strong drivers of profitability.  
 
-**Non-Significant Variables**
-Average Rating (p ≈ 0.178): Surprisingly, a movie's IMDb average rating is not significantly associated with its profit in this model.
+**Non-Significant Variables**  
+Average Rating (p ≈ 0.178): Surprisingly, a movie's IMDb average rating is not significantly associated with its profit in this model.  
 
-- Several genres such as Biography, Crime, Mystery, Romance, Musical, Music, War, Western, Sport did not show a statistically significant impact on profit.
+- Several genres such as Biography, Crime, Mystery, Romance, Musical, Music, War, Western, Sport did not show a statistically significant impact on profit.  
 
 - Seasonal Effects: No season (Spring, Summer, Winter) showed a significant impact on profit. Even Summer, which is typically considered a blockbuster season, is only marginally close (p ≈ 0.098).
 
-# 5-Business Recommendations
-Although a multiple linear regression model was developed to predict film profitability, diagnostic tests revealed significant violations of model assumptions (heteroscedasticity, non-normality of residuals, multicollinearity issues). Consequently, the model's outputs cannot be considered fully reliable for business recommendations.
+# 5-Business Recommendations  
+Although a multiple linear regression model was developed to predict film profitability, diagnostic tests revealed significant violations of model assumptions (heteroscedasticity, non-normality of residuals, multicollinearity issues). Consequently, the model's outputs cannot be considered fully reliable for business recommendations.  
 
-Therefore, the final strategic insights are based on robust hypothesis testing (ANOVA, Tukey HSD, t-tests), which provided clearer and statistically sound conclusions regarding genre profitability, seasonal effects, and runtime preferences.
+Therefore, the final strategic insights are based on robust hypothesis testing (ANOVA, Tukey HSD, t-tests), which provided clearer and statistically sound conclusions regarding genre profitability, seasonal effects, and runtime preferences.  
 
-### Business Recommendation 1
-**Prioritize the Production of Action, Adventure, and Family-Oriented Films**
-Our hypothesis testing revealed that Action and Adventure films consistently generate the highest average profits among all genres. Additionally, Family films demonstrate strong profitability, particularly when compared to genres like Drama, Comedy, and Documentary, which tend to yield lower returns.
+### Business Recommendation 1  
+**Prioritize the Production of Action, Adventure, and Family-Oriented Films**  
+Our hypothesis testing revealed that Action and Adventure films consistently generate the highest average profits among all genres. Additionally, Family films demonstrate strong profitability, particularly when compared to genres like Drama, Comedy, and Documentary, which tend to yield lower returns.  
 
-For a new studio aiming to maximize box office success, focusing production efforts on Action, Adventure, and Family genres represents a strategic advantage. These genres benefit from wide audience appeal, global marketability, and higher revenue potential, making them optimal candidates for future film projects.
+For a new studio aiming to maximize box office success, focusing production efforts on Action, Adventure, and Family genres represents a strategic advantage. These genres benefit from wide audience appeal, global marketability, and higher revenue potential, making them optimal candidates for future film projects.  
 
-### Business Recommendation 2
-**Allocate Sufficient Budget to Production**
-Films with higher production budgets consistently demonstrate greater profitability. While budget management remains crucial, investing adequately in production quality—such as casting, special effects, and marketing—can substantially enhance a film’s commercial performance and competitive positioning.
+### Business Recommendation 2 
+**Allocate Sufficient Budget to Production**  
+Films with higher production budgets consistently demonstrate greater profitability. While budget management remains crucial, investing adequately in production quality—such as casting, special effects, and marketing—can substantially enhance a film’s commercial performance and competitive positioning.  
 
-### Business Recommendation 3
-**Balance Film Length with Audience Engagement**
-Although longer films (running 120 minutes or more) tend to achieve higher profits, they are also associated with slightly lower audience ratings. It is therefore essential to balance runtime with compelling storytelling and pacing to ensure positive viewer reception while capitalizing on profitability.
-# 6-Conclusion
+### Business Recommendation 3  
+**Balance Film Length with Audience Engagement**  
+Although longer films (running 120 minutes or more) tend to achieve higher profits, they are also associated with slightly lower audience ratings. It is therefore essential to balance runtime with compelling storytelling and pacing to ensure positive viewer reception while capitalizing on profitability.  
+# 6-Conclusion  
 This analysis provided valuable insights into the key drivers of box office success. Through an integrated dataset combining financial figures, descriptive movie characteristics, and audience ratings, we identified significant patterns that can inform strategic production decisions.  
 
 Our findings revealed that:  
 
-- Release Timing Matters: Movies released during the summer season exhibit significantly higher profits compared to other seasons, making it the most favorable window for maximizing box office returns.
+- Release Timing Matters: Movies released during the summer season exhibit significantly higher profits compared to other seasons, making it the most favorable window for maximizing box office returns.  
 
-- Budget is a Critical Factor: Higher production budgets correlate strongly with increased profitability, though they also imply higher financial risk. Strategic investment in production quality and marketing is essential.
+- Budget is a Critical Factor: Higher production budgets correlate strongly with increased profitability, though they also imply higher financial risk. Strategic investment in production quality and marketing is essential.  
 
-- Film Characteristics Influence Success: Genres like Action, Adventure, and Sci-Fi tend to be more profitable, while genres like Drama and Comedy yield more modest returns. Additionally, films with runtimes between 100 and 130 minutes strike a balance between profitability and audience reception.
+- Film Characteristics Influence Success: Genres like Action, Adventure, and Sci-Fi tend to be more profitable, while genres like Drama and Comedy yield more modest returns. Additionally, films with runtimes between 100 and 130 minutes strike a balance between profitability and audience reception.  
 
-- Audience Engagement is Key: A strong positive correlation exists between the number of votes a film receives and its profit, emphasizing the importance of visibility and popularity in driving financial success.
+- Audience Engagement is Key: A strong positive correlation exists between the number of votes a film receives and its profit, emphasizing the importance of visibility and popularity in driving financial success.  
 
-Overall, these insights equip the new film studio with data-driven recommendations for optimizing film production choices and release strategies.
+Overall, these insights equip the new film studio with data-driven recommendations for optimizing film production choices and release strategies.  
  
 # 7-Next Steps 
 To further refine and expand this analysis, we recommend the following next steps:  
 
-- Develop a Predictive Profitability Model:
-Build a multiple linear regression model or machine learning model (e.g., Random Forest) to predict box office profit based on variables such as genre, budget, runtime, season, rating, and number of votes.
+- Develop a Predictive Profitability Model:  
+Build a multiple linear regression model or machine learning model (e.g., Random Forest) to predict box office profit based on variables such as genre, budget, runtime, season, rating, and number of votes.  
 
-- Validate the model’s predictive accuracy and identify key feature importance rankings.
+- Validate the model’s predictive accuracy and identify key feature importance rankings.  
 
 - Incorporate Marketing & Distribution Data:
 Enrich the dataset by integrating variables like marketing spend, number of theaters/screens, and digital platform releases to capture additional factors influencing financial success.
