@@ -45,7 +45,7 @@ These datasets were merged based on relevant keys like the **movie title** and *
 This understanding phase allows us to:  
 - Identify relevant variables for the business problem (e.g., gross revenue, rating, budget, genre),  
 - Evaluate data quality (missing values, duplicates, inconsistent formats),  
-- Detect potential issues before deeper statistical analysis and modeling.  
+- Detect potential issues before deeper statistical analysis.
 
 # 2-Tools and Methods  
 ## Data Sources  
@@ -63,9 +63,7 @@ This understanding phase allows us to:
 
 >Tukey’s HSD (Post-hoc Test) for pairwise genre comparisons.
 
->T-tests to compare average ratings between short and long movies.
-
->Chi-Square Tests to analyze associations between categorical variables (if applicable).
+>T-tests to compare average ratings between short and long movies.  
 
 ## Tools Used  
 
