@@ -234,13 +234,13 @@ Set up web scraping pipelines or API integrations with platforms like IMDb, Box 
 Collaborate with marketing teams to design A/B tests around release dates, trailers, and promotional campaigns to empirically measure their impact on audience engagement and ticket sales.
 
 # Repository Structure
-├── .ipynb_checkpoints  
+├── .ipynb_checkpoints    
 ├── data  
 ├── images  
-├── .gitattributes  
-├── .gitignore 
-├── Box_Office_Presentation.pdf
-├── Final.ipynb
-├── Final.pdf
+├── .gitattributes    
+├── .gitignore   
+├── Box_Office_Presentation.pdf  
+├── Final.ipynb  
+├── Final.pdf  
 ├── LICENSE  
 └── README.md  
