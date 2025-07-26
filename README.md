@@ -238,7 +238,9 @@ Collaborate with marketing teams to design A/B tests around release dates, trail
 ├── data  
 ├── images  
 ├── .gitattributes  
-├── .gitignore   
-├── Final.ipynb  
+├── .gitignore 
+├── Box_Office_Presentation.pdf
+├── Final.ipynb
+├── Final.pdf
 ├── LICENSE  
 └── README.md  
