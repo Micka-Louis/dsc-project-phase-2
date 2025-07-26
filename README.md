@@ -67,15 +67,6 @@ This understanding phase allows us to:
 
 >Chi-Square Tests to analyze associations between categorical variables (if applicable).
 
-## Modeling Techniques  
-Multiple Linear Regression (OLS):  
-
->Attempted to predict movie profits based on production budget, runtime, average rating, vote count, genres, and release seasons.  
-
->Diagnosed model limitations: heteroscedasticity, non-normal residuals, multicollinearity.  
-
->Due to assumption violations, the model was not used for final business recommendations.  
-
 ## Tools Used  
 
 - Python: pandas, numpy, matplotlib, seaborn  
@@ -83,7 +74,7 @@ Multiple Linear Regression (OLS):
 - Git and GitHub for version control  
 
 # 3-Results  
-### Distribution of profit
+### Distribution of profit 
 ![Graphique](images/imag4.png)  
 The graph above illustrates the distribution of film profits in our database. Most films fall within a relatively low profit range, between 0 and 50 million dollars. A strong right skew is also observed, indicating that a small number of films generate exceptionally high profits, while others even incur losses (negative profit). This representation highlights the high heterogeneity of the film market: although some productions achieve significant commercial success, a substantial proportion of films struggle to break even. This observation reinforces the relevance of our study, which aims to model the factors influencing profit in order to provide informed recommendations to a new film production company.  
 
@@ -192,58 +183,10 @@ The analysis confirms that Action and Adventure films are the most profitable ge
 
 These insights suggest that the company should prioritize producing Action, Adventure, and Family-oriented films, as they represent the highest potential for maximizing box office returns.  
 
-# 4-Modeling Attempt  
-**Objective of the Model**  
-The primary objective was to build a statistical model capable of explaining and predicting box office profit based on movie characteristics such as budget, runtime, ratings, votes, release season, and genres. A multiple linear regression approach was adopted to quantify how these factors influence profitability.  
-**Interpretation of the OLS Regression Results**  
-**Model Performance**  
-R-squared (0.498): The model explains approximately 49.8% of the variability in movie profit. This is a moderate level of explanation, indicating that while the model captures key factors influencing profit, a substantial portion of the variance is still unexplained.  
+# 4-Business Recommendations  
+To guide the studio’s production strategy, this analysis relied exclusively on robust statistical hypothesis testing techniques, including ANOVA, Tukey HSD post-hoc tests, and t-tests. These methods were employed to assess the profitability differences across genres, the impact of seasonality on box office success, and the influence of runtime on audience ratings.  
 
-F-statistic (109.6, p-value < 0.001): The model as a whole is statistically significant, meaning that at least one predictor variable is associated with profit.  
-
-**Significant Predictors:** 
-
-- Production Budget (coef = 1.87, p < 0.001):  
-Strong positive correlation. For every additional dollar spent on production, profit increases by approximately $1.87 on average. This indicates that higher budgets are generally associated with higher profits.  
-
-- Runtime (coef = -313,100, p ≈ 0.011):  
-Negative association. Longer movies tend to generate lower profit. Although significant, the effect size is small compared to budget impacts.  
-
-- Number of Votes (coef = 371.47, p < 0.001): Highly significant positive relationship. More audience engagement (via votes) correlates with higher profits.  
-
-Genres with Significant Positive Effects on Profit:  
-
->Adventure (+$50.39M)
-
->Animation (+$60.94M)
-
->Comedy (+$23.90M)
-
->Documentary (+$22.58M)
-
->Drama (+$26.04M)
-
->Family (+$146.0M) — highest positive coefficient
-
->Fantasy (+$118.4M)
-
->Horror (+$58.17M)
-
->Sci-Fi (+$72.99M)
-
-These genres appear to be strong drivers of profitability.  
-
-**Non-Significant Variables**  
-Average Rating (p ≈ 0.178): Surprisingly, a movie's IMDb average rating is not significantly associated with its profit in this model.  
-
-- Several genres such as Biography, Crime, Mystery, Romance, Musical, Music, War, Western, Sport did not show a statistically significant impact on profit.  
-
-- Seasonal Effects: No season (Spring, Summer, Winter) showed a significant impact on profit. Even Summer, which is typically considered a blockbuster season, is only marginally close (p ≈ 0.098).
-
-# 5-Business Recommendations  
-Although a multiple linear regression model was developed to predict film profitability, diagnostic tests revealed significant violations of model assumptions (heteroscedasticity, non-normality of residuals, multicollinearity issues). Consequently, the model's outputs cannot be considered fully reliable for business recommendations.  
-
-Therefore, the final strategic insights are based on robust hypothesis testing (ANOVA, Tukey HSD, t-tests), which provided clearer and statistically sound conclusions regarding genre profitability, seasonal effects, and runtime preferences.  
+Focusing on hypothesis-driven insights ensured that the recommendations are grounded in statistically validated relationships found within the data, providing the studio with practical and evidence-based guidelines for maximizing future profits.  
 
 ### Business Recommendation 1  
 **Prioritize the Production of Action, Adventure, and Family-Oriented Films**  
@@ -258,7 +201,7 @@ Films with higher production budgets consistently demonstrate greater profitabil
 ### Business Recommendation 3  
 **Balance Film Length with Audience Engagement**  
 Although longer films (running 120 minutes or more) tend to achieve higher profits, they are also associated with slightly lower audience ratings. It is therefore essential to balance runtime with compelling storytelling and pacing to ensure positive viewer reception while capitalizing on profitability.  
-# 6-Conclusion  
+# 5-Conclusion  
 This analysis provided valuable insights into the key drivers of box office success. Through an integrated dataset combining financial figures, descriptive movie characteristics, and audience ratings, we identified significant patterns that can inform strategic production decisions.  
 
 Our findings revealed that:  
@@ -273,7 +216,7 @@ Our findings revealed that:
 
 Overall, these insights equip the new film studio with data-driven recommendations for optimizing film production choices and release strategies.  
  
-# 7-Next Steps 
+# 6-Next Steps 
 To further refine and expand this analysis, we recommend the following next steps:  
 
 - Develop a Predictive Profitability Model:  
